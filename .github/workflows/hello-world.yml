@@ -14,3 +14,9 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello ${{ github.actor }}! This is your updated GitHub Actions!"
+      
+      - name: Print Environment Variables
+        run: env
+      
+      - name: Use Secret Message
+        run: echo "The secret message is ${{ secrets.MY_SECRET_MESSAGE }}"
